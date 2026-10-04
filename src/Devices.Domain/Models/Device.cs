@@ -24,17 +24,17 @@ public class Device
 
 	public void Update(string? name, string? brand, DeviceState? state)
 	{
-		State = state ?? State;
+		bool nameChanging = !string.IsNullOrWhiteSpace(name) && name != Name;
+		bool brandChanging = !string.IsNullOrWhiteSpace(brand) && brand != Brand;
 
-		if (State == DeviceState.InUse && (name != null || brand != null))
+		if (State == DeviceState.InUse && (nameChanging || brandChanging))
 		{
 			throw new DeviceInUseException(Id);
 		}
-		else
-		{
-			Name = string.IsNullOrWhiteSpace(name) ? Name : name;
-			Brand = string.IsNullOrWhiteSpace(brand) ? Brand : brand;
-		}
+
+		State = state ?? State;
+		Name = string.IsNullOrWhiteSpace(name) ? Name : name;
+		Brand = string.IsNullOrWhiteSpace(brand) ? Brand : brand;
 	}
 	
 	private static void Validate(string name, string brand)
