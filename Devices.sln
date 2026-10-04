@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devices.Tests", "tests\Devices.Tests\Devices.Tests.csproj", "{674A9429-50B4-4137-91A4-909DA6490929}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devices.IntegrationTests", "tests\Devices.IntegrationTests\Devices.IntegrationTests.csproj", "{A690DD5E-B666-4B15-8AE8-23829A111E66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,18 @@ Global
 		{674A9429-50B4-4137-91A4-909DA6490929}.Release|x64.Build.0 = Release|Any CPU
 		{674A9429-50B4-4137-91A4-909DA6490929}.Release|x86.ActiveCfg = Release|Any CPU
 		{674A9429-50B4-4137-91A4-909DA6490929}.Release|x86.Build.0 = Release|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Debug|x64.Build.0 = Debug|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Debug|x86.Build.0 = Debug|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Release|x64.ActiveCfg = Release|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Release|x64.Build.0 = Release|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Release|x86.ActiveCfg = Release|Any CPU
+		{A690DD5E-B666-4B15-8AE8-23829A111E66}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,5 +111,6 @@ Global
 		{E45E5666-82A4-4CE2-B359-9AB52800B121} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{AE0C68D3-B9D9-4606-8295-F3AD01815778} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{674A9429-50B4-4137-91A4-909DA6490929} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{A690DD5E-B666-4B15-8AE8-23829A111E66} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal

@@ -46,3 +46,6 @@ app.MapControllers();
 app.MapHealthChecks("/health");
 
 app.Run();
+
+// integration tests (WebApplicationFactory<Program>)
+public partial class Program;
