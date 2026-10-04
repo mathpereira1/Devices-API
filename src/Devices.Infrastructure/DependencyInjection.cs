@@ -11,7 +11,7 @@ public static class DependencyInjection
 	public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
 	{
 		services.AddDbContext<DevicesDbContext>(options =>
-			options.UseNpgsql(connectionString));
+			options.UseNpgsql(connectionString, npgsql => npgsql.EnableRetryOnFailure()));
 		services.AddScoped<IDeviceRepository, DeviceRepository>();
 
 		return services;
