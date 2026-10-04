@@ -49,5 +49,13 @@ public class Device
 			throw new DomainValidationException("Device brand cannot be empty.");
 		}
 	}
+
+	public void EnsureCanBeDeleted()
+	{
+		if (State == DeviceState.InUse)
+		{
+			throw new DeviceInUseException(Id);
+		}
+	}
 	
 }
