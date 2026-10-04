@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+using Devices.Api.ExceptionHandling;
 using Devices.Application.Services;
 using Devices.Infrastructure;
 
@@ -8,10 +10,15 @@ var connectionString = builder.Configuration.GetConnectionString("DevicesDb") ??
 // Add services to the container.
 builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddScoped<DeviceService>();
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 var app = builder.Build();
+
+app.UseExceptionHandler();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
